@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 249 247 255; /* pastel background */
+    --card: 255 255 255;
+    --text: 31 31 38;
+  }
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-[rgb(var(--bg))] text-[rgb(var(--text))] antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-[rgb(var(--card))] shadow-sm border border-black/5;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-medium bg-black/5 hover:bg-black/10 transition-colors;
+  }
+}
